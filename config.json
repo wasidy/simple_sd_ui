@@ -1,0 +1,9 @@
+{
+    "checkpoints_folder": "models",
+    "max_width": 2048,
+    "max_height": 2048,
+    "min_width": 64,
+    "min_height": 64,
+    "guidance_scale": 7.5,
+    "steps_default": 40
+}
