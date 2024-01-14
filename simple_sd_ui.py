@@ -10,6 +10,9 @@ import torch
 from diffusers import StableDiffusionPipeline
 import gradio as gr
 
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+if device=='cpu':
+    print('GPU not found, using CPU!')
 
 try:
     f = open('config.json', 'r')
@@ -24,6 +27,7 @@ def get_checkpoints_list(path):
     checkpoints = [file for file in flist if os.path.splitext(file)[1] in extentions]
     if len(checkpoints) == 0:
         raise FileNotFoundError()
+        print('Put Stable Diffusion cpkt or safetensors checkpoints to folder!')
     return checkpoints
 
 
@@ -39,10 +43,10 @@ class CheckPoint():
 
     def load_checkpoint(self, filename):
         try:
-            self.pipe = StableDiffusionPipeline.from_single_file(self.path+'\\'+filename,
-                                                                 torch_dtype=torch.float16,
+            self.pipe = StableDiffusionPipeline.from_single_file(self.path+'/'+filename,
+                                                                 #torch_dtype=torch.float16,
                                                                  use_safetensors=True)
-            self.pipe = self.pipe.to('cuda')
+            self.pipe = self.pipe.to(device)
             print(f'Checkpoint {self.path + filename} loaded!')
         except Warning:
             print('Checkpoint corrupted!')
@@ -51,7 +55,7 @@ class CheckPoint():
 
     def generate_image(self, positive_prompt, negative_prompt, width,
                        height, g_scale, manual_seed, steps):
-        generator = torch.Generator(device='cuda')
+        generator = torch.Generator(device=device)
         seed = generator.seed() if manual_seed == -1 else manual_seed
         generator = generator.manual_seed(seed)
 
@@ -104,4 +108,4 @@ with simple_sd:
 
 if __name__ == '__main__':
     simple_sd.queue(max_size=1)
-    simple_sd.launch(inbrowser=True)
+    simple_sd.launch(server_name = '0.0.0.0')
