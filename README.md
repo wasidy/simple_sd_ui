@@ -1,4 +1,4 @@
-## EN - Simple Stable Diffusion UI built on hugging's face diffusers.
+## `EN` - Simple Stable Diffusion UI built on hugging's face diffusers.
 ### Requirements:
 - python 3.9
 ### Installation:
@@ -17,10 +17,8 @@ Copy files to folder and run pip install -r requirements.txt (venv recommended)
 [https://docs.nvidia.com/cuda/wsl-user-guide/](https://docs.nvidia.com/cuda/wsl-user-guide/)
 - For Windows Docker Desktop launch from PowerShell:\
 ``docker run -it --rm -p 7860:7860 --env NVIDIA_DISABLE_REQUIRE=1 --gpus all simple_sd_ui``
-
-
-
-## RU - Удобный и простой интерфейс Stable Diffusion для генерации изображений.
+---
+## `RU` - Удобный и простой интерфейс Stable Diffusion для генерации изображений.
 ### Требования:
 - python 3.9
 ### Установка:
