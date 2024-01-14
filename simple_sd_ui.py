@@ -3,6 +3,7 @@
 Created on Sun Jan 22 17:53:15 2023
 
 @author: Vasiliy Stepanov
+See manual at: https://github.com/wasidy/simple_sd_ui
 """
 import os
 import json
