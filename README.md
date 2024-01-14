@@ -2,7 +2,7 @@
 ### Requirements:
 - python 3.9
 ### Installation:
-Copy files to folder and run pip install -r requirements.txt (venv recommended)
+Copy files to folder and run `pip install -r requirements.txt` (venv recommended)
 
 ### Usage:
 - Put your checkpoints to 'models' folder.
@@ -22,7 +22,7 @@ Copy files to folder and run pip install -r requirements.txt (venv recommended)
 ### Требования:
 - python 3.9
 ### Установка:
-Скопируйте файлы в папку и запустите pip install -r requirements.txt (рекомендуется создание виртуального окружения venv)
+Скопируйте файлы в папку и запустите `pip install -r requirements.txt` (рекомендуется создание виртуального окружения venv)
 
 ### Использование:
 - Скопируйте модели в папку 'models'.
