@@ -16,7 +16,7 @@ Copy files to folder and run `pip install -r requirements.txt` (venv recommended
 - For WSL users additional info:
 [https://docs.nvidia.com/cuda/wsl-user-guide/](https://docs.nvidia.com/cuda/wsl-user-guide/)
 - For Windows Docker Desktop launch from PowerShell:\
-``docker run -it --rm -p 7860:7860 --env NVIDIA_DISABLE_REQUIRE=1 --gpus all simple_sd_ui``
+``docker run -it -p 7860:7860 --env NVIDIA_DISABLE_REQUIRE=1 --gpus all simple_sd_ui``
 ---
 ## `RU` - Удобный и простой интерфейс Stable Diffusion для генерации изображений.
 ### Требования:
@@ -36,7 +36,7 @@ Copy files to folder and run `pip install -r requirements.txt` (venv recommended
 - Дополнительная информация для пользователей WSL:
 [https://docs.nvidia.com/cuda/wsl-user-guide/](https://docs.nvidia.com/cuda/wsl-user-guide/)
 - Для запуска контейнера в Windows Docker Desktop используйте следующую команду в PowerShell:\
-``docker run -it --rm -p 7860:7860 --env NVIDIA_DISABLE_REQUIRE=1 --gpus all simple_sd_ui``
+``docker run -it -p 7860:7860 --env NVIDIA_DISABLE_REQUIRE=1 --gpus all simple_sd_ui``
 
 ---
 ![image](https://github.com/wasidy/simple_sd_ui/assets/122546017/8f99a939-e36a-4a40-a32e-d4ecece5f3a8)
